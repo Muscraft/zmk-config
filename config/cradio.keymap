@@ -84,7 +84,7 @@
             &kp GRAVE  &kp TILDE  &kp LBRC   &kp LPAR   &kp LBKT       &kp COLON  &kp RCTRL  &kp RSHFT  &kp RALT   &kp RGUI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  <       │  >       │  }       │  )       │  ]       │   │  |       │  -       │  =       │  +       │  \       │
-            &kp LT     &kp GT     &kp LBRC   &kp RPAR   &kp RBKT       &kp PIPE   &kp MINUS  &kp EQUAL  &kp PLUS   &kp BSLH
+            &kp LT     &kp GT     &kp RBRC   &kp RPAR   &kp RBKT       &kp PIPE   &kp MINUS  &kp EQUAL  &kp PLUS   &kp BSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans       &lt 3 ENTER  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
