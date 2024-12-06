@@ -1,6 +1,5 @@
-
 ## Setup
-1. Install [keymap-drawer]
+1. Install [keymap-drawer](https://github.com/caksoylar/keymap-drawer)
 ```
 pipx install keymap-drawer
 ```
@@ -8,4 +7,3 @@ pipx install keymap-drawer
 ```
 git config core.hooksPath .githooks
 ```
-
