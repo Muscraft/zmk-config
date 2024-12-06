@@ -6,8 +6,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LSHFT k3  &ht LCTRL k4
-#define HRMR(k1,k2,k3,k4) &ht RCTRL k1  &ht RSHFT k2  &ht RALT k3  &ht RGUI k4
+#define HRML(k1,k2,k3,k4) &ht_l LGUI k1  &ht_l LALT k2  &ht LSHFT k3  &ht LCTRL k4
+#define HRMR(k1,k2,k3,k4) &ht RCTRL k1  &ht RSHFT k2  &ht_l RALT k3  &ht_l RGUI k4
 
 // Word Nav
 #define NXTWD &kp LC(RIGHT)
@@ -24,8 +24,17 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <100>;
+    		quick-tap-ms = <200>;
+    		require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
+        ht_l: hold_tap_long {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <400>;
+    		quick-tap-ms = <200>;
+    		require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
     };
@@ -78,7 +87,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  !       │  @       │  #       │  $       │  %       │   │  ^       │  &       │  *       │  _       │  "       │
-            &kp EXCL  &kp AT      &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp UNDER  &kp SEMI
+            &kp EXCL  &kp AT      &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp UNDER  &kp DQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  `       │  ~       │  {       │  (       │  [       │   │  '       │  RCRTL   │  RSHFT   │  RALT    │  RGUI    │
             &kp GRAVE  &kp TILDE  &kp LBRC   &kp LPAR   &kp LBKT       &kp APOS   &kp RCTRL  &kp RSHFT  &kp RALT   &kp RGUI
@@ -90,7 +99,7 @@
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
-        
+
         number_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
