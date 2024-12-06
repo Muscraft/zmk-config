@@ -1,0 +1,12 @@
+#!/bin/sh
+echo
+if [ -e .commit ]
+    then
+    rm .commit
+    keymap parse -c 10 -z config/cradio.keymap >cradio-temp.yaml
+    keymap draw cradio-temp.yaml >sweep.svg
+    rm cradio-temp.yaml
+    git add sweep.svg
+    git commit --amend -C HEAD --no-verify
+fi
+exit
