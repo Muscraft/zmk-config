@@ -3,7 +3,7 @@ on:
   workflow_dispatch: # can be triggered manually
   push:
     paths:
-      - "build.yaml"
+      - ".github/workflows/build.yml"
       - "config/*.keymap"
       - "config/*.conf"
       - "config/west.yml"
