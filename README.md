@@ -3,7 +3,11 @@
 ```
 pipx install keymap-drawer
 ```
-2. Install git hooks
+2. Install [pre-commit](https://pre-commit.com/)
 ```
-git config core.hooksPath .githooks
+pipx install pre-commit
+```
+3. Install pre-commit hooks
+```
+pre-commit install -t pre-commit -t commit-msg
 ```
