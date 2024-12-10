@@ -30,6 +30,9 @@
 #define SC_LEFT &msc SCRL_LEFT
 #define SC_RIGHT &msc SCRL_RIGHT
 
+// Screenshot
+#define SCN_SHOT &kp LS(PSCRN)
+
 / {
     behaviors {
         ht: hold_tap {
@@ -86,7 +89,7 @@
             &kp ESC    &kp C_PP   VOL_DN     VOL_UP     &none          &kp PG_UP  PRVWD      &kp UP     NXTWD      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  LGUI    │  LALT    │  LSHFT   │  LCTRL   │          │   │  PG_DN   │  LEFT    │  DOWN    │  RIGHT   │  undo    │
-            &kp LGUI   &kp LALT   &kp LSHFT  &kp LCTRL  &none          &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT &kp K_UNDO
+            &kp LGUI   &kp LALT   &kp LSHFT  &kp LCTRL  SCN_SHOT       &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT &kp K_UNDO
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  cut     │  paste   │  copy    │          │   │          │  HOME    │  BSPC    │  END     │  redo    │
            &caps_word &kp K_CUT  &kp K_PASTE &kp K_COPY &none          &none      &kp HOME   &kp BSPC   &kp END   &kp K_REDO
