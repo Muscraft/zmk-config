@@ -85,11 +85,11 @@
         //│  ESC     │Play/Pause│  VOL_DN  │  VOL_UP  │          │   │  PG_UP   │  PRVWD   │  UP      │  NXTWD   │          │
             &kp ESC    &kp C_PP   VOL_DN     VOL_UP     &none          &kp PG_UP  PRVWD      &kp UP     NXTWD      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  LGUI    │  LALT    │  LSHFT   │  LCTRL   │          │   │  PG_DN   │  LEFT    │  DOWN    │  RIGHT   │          │
-            &kp LGUI   &kp LALT   &kp LSHFT  &kp LCTRL  &none          &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &none
+        //│  LGUI    │  LALT    │  LSHFT   │  LCTRL   │          │   │  PG_DN   │  LEFT    │  DOWN    │  RIGHT   │  undo    │
+            &kp LGUI   &kp LALT   &kp LSHFT  &kp LCTRL  &none          &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT &kp K_UNDO
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │          │          │          │          │   │          │  HOME    │  BSPC    │  END     │          │
-           &caps_word  &none      &none      &none      &none          &none      &kp HOME   &kp BSPC   &kp END    &none
+        //│ CAPS     │  cut     │  paste   │  copy    │          │   │          │  HOME    │  BSPC    │  END     │  redo    │
+           &caps_word &kp K_CUT  &kp K_PASTE &kp K_COPY &none          &none      &kp HOME   &kp BSPC   &kp END   &kp K_REDO
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
