@@ -156,8 +156,8 @@
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
           &bootloader  &none      &none      &none     &bt BT_SEL 1    &none      &none      &none      &none     &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ STUDIO   │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │ STUDIO   │
-       &studio_unlock  &none      &none     &bt BT_CLR &bt BT_SEL 2    &none      &none      &none      &none     &studio_unlock
+        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
+            &none      &none      &none     &bt BT_CLR &bt BT_SEL 2    &none      &none      &none      &none     &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
