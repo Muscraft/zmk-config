@@ -1,0 +1,368 @@
+parse_config:
+  trans_legend:
+    t: ▽
+    type: trans
+
+  raw_binding_map:
+    # Modifiers
+    "&caps_word": $$material:keyboard_capslock$$
+
+    # Bluetooth
+    '&bt BT_CLR':
+      tap: $$material:bluetooth_disabled$$
+      hold: Clear
+    '&bt BT_CLR_ALL':
+      tap: $$material:bluetooth_disabled$$
+      hold: Clear All
+    '&bt BT_SEL 0':
+      tap: $$material:bluetooth_connected$$
+      shifted: '0'
+      type: sym_sub_text
+    '&bt BT_SEL 1':
+      tap: $$material:bluetooth_connected$$
+      shifted: '1'
+      type: sym_sub_text
+    '&bt BT_SEL 2':
+      tap: $$material:bluetooth_connected$$
+      shifted: '2'
+      type: sym_sub_text
+
+    # Reset
+    "&sys_reset":
+      tap: $$material:restart_alt$$
+    "&bootloader":
+      tap: $$material:downloading$$
+    
+
+    # Scroll
+    '&msc SCRL_UP':
+      tap:     $$material:monitor$$
+      shifted: $$material:arrow_upward$$
+      type:    sym_by_sym
+    '&msc SCRL_DOWN':
+      tap:     $$material:monitor$$
+      shifted: $$material:arrow_downward$$
+      type:    sym_by_sym
+    '&msc SCRL_LEFT':
+      tap:     $$material:monitor$$
+      shifted: $$material:arrow_left_alt$$
+      type:    sym_by_sym
+    '&msc SCRL_RIGHT':
+      tap:     $$material:monitor$$
+      shifted: $$material:arrow_right_alt$$
+      type:    sym_by_sym
+
+    # Mouse
+    '&mmv MOVE_UP':
+      tap:     $$material:mouse$$
+      shifted: $$material:arrow_upward$$
+      type:    sym_by_sym
+    '&mmv MOVE_DOWN':
+      tap:     $$material:mouse$$
+      shifted: $$material:arrow_downward$$
+      type:    sym_by_sym
+    '&mmv MOVE_LEFT':
+      tap:     $$material:mouse$$
+      shifted: $$material:arrow_left_alt$$
+      type:    sym_by_sym
+    '&mmv MOVE_RIGHT':
+      tap:     $$material:mouse$$
+      shifted: $$material:arrow_right_alt$$
+      type:    sym_by_sym
+    '&mkp LCLK': $$material:left_click$$
+    '&mkp MCLK': 
+      tap:     $$material:mouse$$
+      shifted: $$material:left_click$$
+      type:    sym_by_sym
+    '&mkp RCLK': $$material:right_click$$
+
+  # ZMK
+  zmk_keycode_map:
+    # Symbols
+    EXCLAMATION: "!"
+    EXCL: "!"
+    AT_SIGN: "@"
+    AT: "@"
+    HASH: "#"
+    POUND: "#"
+    DOLLAR: $
+    DLLR: $
+    PERCENT: "%"
+    PRCNT: "%"
+    CARET: ^
+    AMPERSAND: "&"
+    AMPS: "&"
+    ASTERISK: "*"
+    ASTRK: "*"
+    STAR: "*"
+    LEFT_PARENTHESIS: (
+    LPAR: (
+    RIGHT_PARENTHESIS: )
+    RPAR: )
+    EQUAL:
+      tap: "="
+      shifted: "+"
+    PLUS: +
+    MINUS:
+      tap: "-"
+      shifted: "_"
+    UNDERSCORE: _
+    UNDER: _
+    SLASH:
+      tap: "/"
+      shifted: "?"
+    FSLH:
+      tap: "/"
+      shifted: "?"
+    QUESTION: "?"
+    QMARK: "?"
+    BACKSLASH:
+      tap: '\'
+      shifted: "|"
+    BSLH:
+      tap: '\'
+      shifted: "|"
+    PIPE: "|"
+    NON_US_BACKSLASH: \
+    PIPE2: "|"
+    NON_US_BSLH: "|"
+    SEMICOLON:
+      tap: ";"
+      shifted: ":"
+    SEMI:
+      tap: ";"
+      shifted: ":"
+    COLON: ":"
+    SINGLE_QUOTE:
+      tap: "'"
+      shifted: '"'
+    SQT:
+      tap: "'"
+      shifted: '"'
+    APOSTROPHE: <
+    APOS: .
+    DOUBLE_QUOTES: '"'
+    DQT: '"'
+
+    LESS_THAN: <
+    LT: <
+    DOT:
+      tap: "."
+      shifted: ">"
+    COMMA:
+      tap: ","
+      shifted: "<"
+    GREATER_THAN: ">"
+    GT: ">"
+    LEFT_BRACKET:
+      tap: "["
+      shifted: "{"
+    LBKT:
+      tap: "["
+      shifted: "{"
+    LEFT_BRACE: "{"
+    LBRC: "{"
+    RIGHT_BRACKET:
+      tap: "]"
+      shifted: "}"
+    RBKT:
+      tap: "]"
+      shifted: "}"
+    RIGHT_BRACE: "}"
+    RBRC: "}"
+    GRAVE:
+      tap: "`"
+      shifted: "~"
+    TILDE: "~"
+    NON_US_HASH: "#"
+    NUHS: "#"
+    TILDE2: "~"
+
+    # Numbers
+    N1:
+      tap: 1
+      shifted: "!"
+    N2:
+      tap: 2
+      shifted: "@"
+    N3:
+      tap: 3
+      shifted: "#"
+    N4:
+      tap: 4
+      shifted: "$"
+    N5:
+      tap: 5
+      shifted: "%"
+    N6:
+      tap: 6
+      shifted: "^"
+    N7:
+      tap: 7
+      shifted: "&"
+    N8:
+      tap: 8
+      shifted: "*"
+    N9:
+      tap: 9
+      shifted: "("
+    N0:
+      tap: 0
+      shifted: ")"
+
+    # Modifiers
+    LCTRL: $$material:keyboard_control_key$$
+    LALT: $$material:keyboard_alt$$
+    LSHFT: $$material:shift$$
+    LGUI: $$mdi:linux$$
+    RCTRL: $$material:keyboard_control_key$$
+    RALT: $$material:keyboard_alt$$
+    RSHFT: $$material:shift$$
+    RGUI: $$mdi:linux$$
+
+    # Nav
+    UP: $$material:arrow_upward$$
+    DOWN: $$material:arrow_downward$$
+    LEFT: $$material:arrow_left_alt$$
+    RIGHT: $$material:arrow_right_alt$$
+    PG_UP: $$material:vertical_align_top$$
+    PG_DN: $$material:vertical_align_bottom$$
+    HOME: $$material:text_select_jump_to_beginning$$
+    END: $$material:text_select_jump_to_end$$
+    LC(RIGHT): $$material:text_select_move_forward_word$$
+    LC(LEFT): $$material:text_select_move_back_word$$
+
+    # Whitespace
+    ENTER:
+      type: enter
+      tap: $$material:keyboard_return$$
+    ESC: ESC
+    TAB: $$material:keyboard_tab$$
+    SPACE: $$material:space_bar$$
+    BSPC:
+      type: backspace
+      tap:  $$material:backspace$$
+
+    # Media
+    C_PP: $$material:play_pause$$
+    C_VOL_UP: $$material:volume_up$$
+    C_VOL_DN: $$material:volume_down$$
+
+    # Screenshot
+    LS(PSCRN): $$material:screenshot_monitor$$
+
+    # Editing
+    K_COPY: $$material:content_copy$$
+    K_CUT: $$material:content_cut$$
+    K_PASTE: $$material:content_paste$$
+    K_UNDO: $$material:undo$$
+    K_REDO: $$material:redo$$
+
+  zmk_combos: {}
+
+draw_config:
+  style_layer_activators: true
+  n_columns: 1
+  draw_key_sides: false
+  key_w: 60.0
+  key_h: 56.0
+  split_gap: 30.0
+  combo_w: 28.0
+  combo_h: 26.0
+  key_rx: 6.0
+  key_ry: 6.0
+  inner_pad_w: 2.0
+  inner_pad_h: 2.0
+  outer_pad_w: 40.0
+  outer_pad_h: 56.0
+  line_spacing: 1.2
+  arc_radius: 6.0
+  append_colon_to_layer_header: true
+  small_pad: 2.0
+
+  # Glyphs dimensions
+  shrink_wide_legends: 6
+  glyph_tap_size: 18
+  glyph_hold_size: 15
+  glyph_shifted_size: 15
+  glyphs: {}
+  # Custom CSS
+  svg_extra_style: |
+    /* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
+
+    svg.keymap {
+      font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
+      font-size: 24px;
+      font-weight: normal;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Color accent for held keys */
+    rect.held, rect.combo.held {
+        fill: #fab;
+    }
+
+    /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
+    .sym_sub_text.tap {
+      translate: -5px 2px;
+      font-size: 20px;
+    }
+    .sym_sub_text.shifted {
+      translate: 10px 13px;
+      font-size: 10px;
+      opacity: 1.0;
+    }
+    .combo.sym_sub_text.tap {
+      translate: -1px 1px;
+    }
+    .combo.sym_sub_text.shifted {
+      translate: 7px 5px;
+      font-size: 10px;
+      opacity: 1.0;
+    }
+
+    /* Toggle */
+    .toggle.shifted {
+      translate: -10px 12px;
+    }
+
+    .toggle.hold {
+      translate: 13px -23px;
+    }
+
+    /* Variant for tap-dances */
+    .tap_dance.tap {
+      translate: -7px 0px;
+      font-size: 12px;
+    }
+    .tap_dance.shifted {
+      translate: 7px 17px;
+      font-size: 12px;
+      opacity: 1.0;
+    }
+
+    /* Variant for symbol next to symbol */
+    .sym_by_sym.tap {
+      translate: -6px 0px;
+    }
+    .sym_by_sym.shifted {
+      translate: 10px 12px;
+      opacity: 1.0;
+    }
+
+    .combo.sym_by_sym.tap {
+      translate: -35px 0px;
+    }
+    .combo.sym_by_sym.shifted {
+      translate: 35px 20px;
+      opacity: 1.0;
+    }
+
+    .combo.sym_by_sym.hold {
+      visibility: hidden;
+    }
+
+    /* hide hold box for combo sym_by_sym */
+    .combo.sym_by_sym.hold > path[stroke="none"][fill="none"] {
+      visibility: hidden;
+    }
